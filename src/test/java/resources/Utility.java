@@ -4,6 +4,8 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import java.io.*;
 import java.util.Properties;
@@ -36,5 +38,10 @@ public class Utility {
     public String getBaseURI()
     {
         return readProperty("BaseURI");
+    }
+
+    public String getJsonPath(Response response, String key)
+    {
+        return new JsonPath(response.asString()).get(key).toString();
     }
 }

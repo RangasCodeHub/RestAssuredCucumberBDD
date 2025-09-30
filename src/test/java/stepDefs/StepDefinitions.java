@@ -8,9 +8,7 @@ import org.junit.Assert;
 import resources.APIResources;
 import resources.TestDataBuild;
 import resources.Utility;
-
 import java.io.FileNotFoundException;
-
 import static io.restassured.RestAssured.given;
 
 public class StepDefinitions extends Utility {
@@ -18,6 +16,7 @@ public class StepDefinitions extends Utility {
     RequestSpecification reqSpec;
     ResponseSpecification resSpec;
     TestDataBuild testDataBuild = new TestDataBuild();
+    static String placeID;
 
     @Given("Add Place Payload with {string} {string} {string}")
     public void add_place_payload(String name, String language, String address) throws FileNotFoundException {
@@ -36,7 +35,7 @@ public class StepDefinitions extends Utility {
 
     @Then("the API call is successfully with status code {int}")
     public void the_api_call_is_successfully_with_status_code(int statusCode) {
-        Assert.assertEquals(response.getStatusCode(), statusCode);
+        Assert.assertEquals(statusCode,response.getStatusCode());
     }
 
     @Then("{string} in response body is {string}")
@@ -46,10 +45,21 @@ public class StepDefinitions extends Utility {
 
     @Then("Validate if the place is added successfully with {string} and verify {string}")
     public void validateIfThePlaceIsAddedSuccessfullyWithRequest(String resource,String name) throws FileNotFoundException {
-        String placeID = getJsonPath(response, "place_id");
+        placeID = getJsonPath(response, "place_id");
         reqSpec = given().spec(getReqSpec()).queryParam("place_id", placeID);
         user_calls_with_http_request(resource,"GET");
         String actualName = getJsonPath(response,"name");
         Assert.assertEquals(name,actualName);
     }
+
+    @Given("Delete Place Payload")
+    public void deletePlace() throws FileNotFoundException {
+        reqSpec = given().spec(getReqSpec()).body(testDataBuild.deletePlace(placeID));
+    }
+
+    @Given("Get place details")
+    public void getPlaceDetails() throws FileNotFoundException {
+        reqSpec = given().spec(getReqSpec()).queryParam("place_id", placeID);
+    }
+
 }

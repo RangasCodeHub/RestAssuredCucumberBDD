@@ -24,4 +24,11 @@ public class TestDataBuild {
         ap.setTypes(types);
         return ap;
     }
+
+    public String deletePlace(String placeID)
+    {
+        return "{\n" +
+                "\"place_id\":\""+placeID+"\"\n" +
+                "}";
+    }
 }

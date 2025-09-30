@@ -16,91 +16,6 @@ Body:
         "lng": 34.427362
     },
     "accuracy": 50,
-    "name": "Mani",
-    "phone_number": "(+91) 996 362 9618",
-    "address": "1st Block",
-    "website": "http://google.com",
-    "language": "French-IN",
-    "types": [
-        "Shoe part",
-        "Shop"
-    ]
-}
-HTTP/1.1 200 OK
-Date: Tue, 30 Sep 2025 16:26:57 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 194
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK",
-    "place_id": "a4cb756293a013ac78efb2329fb6eba8",
-    "scope": "APP",
-    "reference": "b8689d6d0e9484d98e2458ee05bf2c28b8689d6d0e9484d98e2458ee05bf2c28",
-    "id": "b8689d6d0e9484d98e2458ee05bf2c28"
-}
-Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=a4cb756293a013ac78efb2329fb6eba8
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-				place_id=a4cb756293a013ac78efb2329fb6eba8
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Tue, 30 Sep 2025 16:26:59 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 230
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "location": {
-        "latitude": "-38.383494",
-        "longitude": "34.427362"
-    },
-    "accuracy": "50",
-    "name": "Mani",
-    "phone_number": "(+91) 996 362 9618",
-    "address": "1st Block",
-    "types": "Shoe part,Shop",
-    "website": "http://google.com",
-    "language": "French-IN"
-}
-Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "location": {
-        "lat": -38.383494,
-        "lng": 34.427362
-    },
-    "accuracy": 50,
     "name": "ABC",
     "phone_number": "(+91) 996 362 9618",
     "address": "World Trade Circle",
@@ -112,7 +27,7 @@ Body:
     ]
 }
 HTTP/1.1 200 OK
-Date: Tue, 30 Sep 2025 16:27:00 GMT
+Date: Tue, 30 Sep 2025 18:11:31 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -125,17 +40,17 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "042ecb315b2dae9924753827c07007e7",
+    "place_id": "217a01f87ff874452e1339ee7428f2a3",
     "scope": "APP",
-    "reference": "977969e3ffec4cbbadd750d31c257525977969e3ffec4cbbadd750d31c257525",
-    "id": "977969e3ffec4cbbadd750d31c257525"
+    "reference": "985d621722bf2c0238e0cc7455ad8a63985d621722bf2c0238e0cc7455ad8a63",
+    "id": "985d621722bf2c0238e0cc7455ad8a63"
 }
 Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=042ecb315b2dae9924753827c07007e7
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=217a01f87ff874452e1339ee7428f2a3
 Proxy:			<none>
 Request params:	<none>
 Query params:	key=qaclick123
-				place_id=042ecb315b2dae9924753827c07007e7
+				place_id=217a01f87ff874452e1339ee7428f2a3
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=*/*
@@ -144,7 +59,7 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Tue, 30 Sep 2025 16:27:01 GMT
+Date: Tue, 30 Sep 2025 18:11:32 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -167,62 +82,4 @@ Content-Type: application/json;charset=UTF-8
     "types": "Shoe part,Shop",
     "website": "http://google.com",
     "language": "French-IN"
-}
-Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "place_id": "042ecb315b2dae9924753827c07007e7"
-}
-HTTP/1.1 200 OK
-Date: Tue, 30 Sep 2025 16:27:03 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 15
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK"
-}
-Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=042ecb315b2dae9924753827c07007e7
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-				place_id=042ecb315b2dae9924753827c07007e7
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 404 Not Found
-Date: Tue, 30 Sep 2025 16:27:06 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 67
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "msg": "Get operation failed, looks like place_id  doesn't exists"
 }

@@ -6,11 +6,11 @@ import java.io.FileNotFoundException;
 
 public class Hooks {
 
-    @Before
+    @Before("@DeletePlace")
     public void addPlaceHook() throws FileNotFoundException {
+        StepDefinitions sd = new StepDefinitions();
         if (StepDefinitions.placeID == null) {
-            StepDefinitions sd = new StepDefinitions();
-            System.out.println("Inside the before hook");
+            System.out.println("<<<<<><>>>Inside the before hook");
             sd.add_place_payload("Mani", "French-IN", "1st Block");
             sd.user_calls_with_http_request("AddPlaceAPI", "POST");
             sd.validateIfThePlaceIsAddedSuccessfullyWithRequest("GetPlaceAPI", "Mani");

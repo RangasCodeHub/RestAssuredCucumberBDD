@@ -20,7 +20,7 @@ public class StepDefinitions extends Utility {
 
     @Given("Add Place Payload with {string} {string} {string}")
     public void add_place_payload(String name, String language, String address) throws FileNotFoundException {
-        reqSpec = given().log().all().spec(getReqSpec()).body(testDataBuild.getAddPlace(name, language, address));
+        reqSpec = given().spec(getReqSpec()).body(testDataBuild.getAddPlace(name, language, address));
     }
 
     @When("user calls {string} with {string} Http request")

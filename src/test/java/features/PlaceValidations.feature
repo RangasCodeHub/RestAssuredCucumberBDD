@@ -1,5 +1,6 @@
 Feature: Validate Place APIs
 
+  @AddPlace
   Scenario Outline: Verify if place is added successfully using AddPlace API
     Given Add Place Payload with "<name>" "<language>" "<address>"
     When user calls "AddPlaceAPI" with "POST" Http request
@@ -12,3 +13,15 @@ Feature: Validate Place APIs
       | name | language  | address            |
       | ABC  | French-IN | World Trade Circle |
    #   | UTU  | French-IN | Electronic City, Phase1 |
+
+  @DeletePlace
+  Scenario: Verify if DeletePlaceAPI is working
+    Given Delete Place Payload
+    When user calls "DeletePlaceAPI" with "POST" Http request
+    Then the API call is successfully with status code 200
+    And "status" in response body is "OK"
+
+  Scenario: Verify the place is deleted after DeletePlaceAPI call
+    Given Get place details
+    When user calls "GetPlaceAPI" with "GET" Http request
+    Then the API call is successfully with status code 404
